@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html id='id2'>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="./aide_files/localCommon.js"></script>
+		<script type="text/javascript" src="./aide_files/template.js"></script>
+		<script type="text/javascript" src="./aide_files/Loading.js"></script>
+
+		<meta charset="utf-8">
+		<title>营养宝主页</title>
+		<link rel="stylesheet" href="./aide_files/base.css">
+		<link rel="stylesheet" href="./aide_files/common.css">
+
+		<script type="text/javascript" src="./aide_files/zepto.min.js"></script>
+		<script type="text/javascript" src="./aide_files/jquery-1.8.1.min.js"></script>
+		<script type="text/javascript" src="./aide_files/touch.js"></script>
+		<script type="text/javascript" src="./aide_files/ichart.1.2.min.js"></script>
+
+		<script>
+			window["_GOOG_TRANS_EXT_VER"] = "1";
+		</script>
+		<style type="text/css">
+			#yddContainer {
+				display: block;
+				font-family: Microsoft YaHei;
+				position: relative;
+				width: 100%;
+				height: 100%;
+				top: -4px;
+				left: -4px;
+				font-size: 12px;
+				border: 1px solid
+			}
+			
+			#yddTop {
+				display: block;
+				height: 22px
+			}
+			
+			#yddTopBorderlr {
+				display: block;
+				position: static;
+				height: 17px;
+				padding: 2px 28px;
+				line-height: 17px;
+				font-size: 12px;
+				color: #5079bb;
+				font-weight: bold;
+				border-style: none solid;
+				border-width: 1px
+			}
+			
+			#yddTopBorderlr .ydd-sp {
+				position: absolute;
+				top: 2px;
+				height: 0;
+				overflow: hidden
+			}
+			
+			.ydd-icon {
+				left: 5px;
+				width: 17px;
+				padding: 0px 0px 0px 0px;
+				padding-top: 17px;
+				background-position: -16px -44px
+			}
+			
+			.ydd-close {
+				right: 5px;
+				width: 16px;
+				padding-top: 16px;
+				background-position: left -44px
+			}
+			
+			#yddKeyTitle {
+				float: left;
+				text-decoration: none
+			}
+			
+			#yddMiddle {
+				display: block;
+				margin-bottom: 10px
+			}
+			
+			.ydd-tabs {
+				display: block;
+				margin: 5px 0;
+				padding: 0 5px;
+				height: 18px;
+				border-bottom: 1px solid
+			}
+			
+			.ydd-tab {
+				display: block;
+				float: left;
+				height: 18px;
+				margin: 0 5px -1px 0;
+				padding: 0 4px;
+				line-height: 18px;
+				border: 1px solid;
+				border-bottom: none
+			}
+			
+			.ydd-trans-container {
+				display: block;
+				line-height: 160%
+			}
+			
+			.ydd-trans-container a {
+				text-decoration: none;
+			}
+			
+			#yddBottom {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 22px;
+				line-height: 22px;
+				overflow: hidden;
+				background-position: left -22px
+			}
+			
+			.ydd-padding010 {
+				padding: 0 10px
+			}
+			
+			#yddWrapper {
+				color: #252525;
+				z-index: 10001;
+				background: url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);
+			}
+			
+			#yddContainer {
+				background: #fff;
+				border-color: #4b7598
+			}
+			
+			#yddTopBorderlr {
+				border-color: #f0f8fc
+			}
+			
+			#yddWrapper .ydd-sp {
+				background-image: url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)
+			}
+			
+			#yddWrapper a,
+			#yddWrapper a:hover,
+			#yddWrapper a:visited {
+				color: #50799b
+			}
+			
+			#yddWrapper .ydd-tabs {
+				color: #959595
+			}
+			
+			.ydd-tabs,
+			.ydd-tab {
+				background: #fff;
+				border-color: #d5e7f3
+			}
+			
+			#yddBottom {
+				color: #363636
+			}
+			
+			#yddWrapper {
+				min-width: 250px;
+				max-width: 400px;
+			}
+		</style>
+	</head>
+
+	<body class="hasNav" style="zoom: 1;">
+		<header>主页</header>
+		<nav>
+			<ul>
+				<li><a class="nav_home selected"><span class="nav_icon"></span>主页</a></li>
+				<li><a href="http://aide.nutro.me/diet/main/html" class="nav_diet"><span class="nav_icon"></span>饮食</a></li>
+				<li><a href="http://aide.nutro.me/sport/main/html" class="nav_sport"><span class="nav_icon"></span>运动</a></li>
+				<li><a href="http://aide.nutro.me/user/main/html" class="nav_user"><span class="nav_icon"></span>用户中心</a></li>
+			</ul>
+		</nav>
+		<div class="home_board">
+			<div class="pie_board">
+				<div id="pie_board">
+					<div id="shell-donut2d_7234981180119" style="padding: 0px; margin: -1px; overflow: hidden; position: relative; width: 1366px; height: 150px;">
+						<canvas id="donut2d_7234981180119" style="-webkit-text-size-adjust: none;" width="1366" height="150">
+							<p>Your browser does not support the canvas element</p>
+						</canvas>
+					</div>
+				</div>
+				<div class="pie_center">
+					<span class="top red">-1094</span>
+					<span class="bottom">可摄入卡路里</span>
+				</div>
+				<div class="pie_tag">提示可摄入卡路里等于当天目标卡路里加上运动减去饮食</div>
+			</div>
+			<div class="line_board" style="left: 1366px;">
+				<div class="line_grid">
+					<ul>
+						<li></li>
+						<li class="gray"></li>
+						<li></li>
+						<li class="gray"></li>
+						<li></li>
+						<li class="gray"></li>
+						<li></li>
+						<li class="gray"></li>
+					</ul>
+				</div>
+				<div class="line_tag"><span class="round red"></span><span>摄入</span><span class="round green"></span><span>消耗</span></div>
+				<div id="line_board">
+					<div id="shell-basicline2d_1843981179957" style="padding: 0px; margin: -1px; overflow: hidden; position: relative; width: 1366px; height: 140px;">
+						<canvas id="basicline2d_1843981179957" style="-webkit-text-size-adjust: none;" width="1366" height="140">
+							<p>Your browser does not support the canvas element</p>
+						</canvas>
+						<div style="position: absolute; z-index: 999; width: 0px; height: 0px; top: 25px; left: 222.22px; visibility: hidden;">
+							<div style="width: 0px; height: 1px; position: absolute; background-color: rgb(98, 188, 233);"></div>
+							<div style="width: 1px; height: 90px; position: absolute; background-color: rgb(98, 188, 233);"></div>
+						</div>
+						<div style="border: 2px solid rgb(255, 127, 102); border-radius: 5px; position: absolute; z-index: 0; text-align: left; padding: 4px 5px; cursor: pointer; font-size: 12px; color: black; opacity: 0; transition: opacity 0.3s ease-out 0s, top 0.1s ease-out 0s, left 0.1s ease-out 0s; background-color: rgba(239, 239, 239, 0.85098);"></div>
+						<div style="border: 2px solid rgb(158, 218, 0); border-radius: 5px; position: absolute; z-index: 0; text-align: left; padding: 4px 5px; cursor: pointer; font-size: 12px; color: black; opacity: 0; transition: opacity 0.3s ease-out 0s, top 0.1s ease-out 0s, left 0.1s ease-out 0s; background-color: rgba(239, 239, 239, 0.85098);"></div>
+					</div>
+				</div>
+			</div>
+			<div class="board_controller"><span class="left selected"></span><span class="right"></span></div>
+		</div>
+		<div class="home_btn_bar">
+			<ul>
+				<li><a href="http://aide.nutro.me/home/search/html" class="btn_search"><span class="btn_icon"></span><span class="btn_text">搜索</span></a></li>
+				<li><a href="http://aide.nutro.me/home/scan/html" class="btn_scan"><span class="btn_icon"></span>扫一扫</a>
+				</li>
+				<li><a href="http://aide.nutro.me/home/calorie/add/html" class="btn_add"><span class="btn_icon"></span>快速添加</a></li>
+				<li><a href="http://aide.nutro.me/home/weight/html" class="btn_weight"><span class="btn_icon"></span>体重</a></li>
+			</ul>
+		</div>
+		<div class="link_list home_link_list">
+			<ul></ul>
+		</div>
+
+		<script>
+			var code604 = false;
+			$(function() {
+				$.noConflict();
+				loadSpinner();
+				loadPie();
+				loadLine();
+				loadInfo();
+				removeSpinner();
+				var width = $(window).width();
+				$('.line_board').css('left', width + 'px');
+				var lock = false;
+				$('.home_board').swipeLeft(function() {
+					if (lock == false) {
+						lock = true;
+						$('.line_board').show();
+						$('.pie_board').animate({
+							'left': -width + 'px'
+						}, 500);
+						$('.line_board').animate({
+							'left': 0 + 'px'
+						}, 500, 'linear', function() {
+							$('.pie_board').hide();
+							$('.board_controller').find('span.left').removeClass('selected');
+							$('.board_controller').find('span.right').addClass('selected');
+							lock = false;
+						});
+					}
+				})
+				$('.home_board').swipeRight(function() {
+					if (lock == false) {
+						lock = true;
+						$('.pie_board').show();
+						$('.pie_board').animate({
+							'left': 0 + 'px'
+						}, 500);
+						$('.line_board').animate({
+							'left': width + 'px'
+						}, 500, 'linear', function() {
+							$('.line_board').hide();
+							$('.board_controller').find('span.right').removeClass('selected');
+							$('.board_controller').find('span.left').addClass('selected');
+							lock = false;
+						});
+					}
+				})
+				$('.board_controller').find('span').click(function() {
+					if (lock == false && !$(this).hasClass('selected')) {
+						if ($(this).hasClass('left')) {
+							lock = true;
+							$('.pie_board').show();
+							$('.pie_board').animate({
+								'left': 0 + 'px'
+							}, 500);
+							$('.line_board').animate({
+								'left': width + 'px'
+							}, 500, 'linear', function() {
+								$('.line_board').hide();
+								$('.board_controller').find('span.right').removeClass('selected');
+								$('.board_controller').find('span.left').addClass('selected');
+								lock = false;
+							});
+						} else {
+							lock = true;
+							$('.line_board').show();
+							$('.pie_board').animate({
+								'left': -width + 'px'
+							}, 500);
+							$('.line_board').animate({
+								'left': 0 + 'px'
+							}, 500, 'linear', function() {
+								$('.pie_board').hide();
+								$('.board_controller').find('span.left').removeClass('selected');
+								$('.board_controller').find('span.right').addClass('selected');
+								lock = false;
+							});
+						}
+					}
+				});
+			});
+
+			function loadSpinner() {
+				$('body').addClass('hasModal');
+				$('body').append('<div class="modal trans"><div class="popover loading"></div></div>');
+			}
+
+			function removeSpinner() {
+				$('.modal').remove();
+				$('body').removeClass('hasModal');
+			}
+
+			function loadPie() {
+				var today = new Date();
+				var year = today.getFullYear();
+				var month = today.getMonth() + 1 < 10 ? '0' + (today.getMonth() + 1) : today.getMonth() + 1;
+				var date = today.getDate() < 10 ? '0' + today.getDate() : today.getDate();
+				var timestamp = new Date().valueOf();
+				jQuery.ajax({
+					type: 'POST',
+					url: '/user/calorie/day/' + year + '-' + month + '-' + date,
+					data: {
+						timestamp: '' + timestamp
+					},
+					dataType: 'JSON',
+					success: function(data) {
+						//var obj = JSON.parse(data);
+						var obj = data;
+						var code = obj.code;
+						var msg = obj.message;
+						var response = obj.response;
+						if (code == 200) {
+							var calorieIn = response.calorieIn;
+							var calorieOut = response.calorieOut;
+							var calorieRemain = response.calorieRemain;
+							$.ajax({
+								type: 'POST',
+								url: '/user/goal/list',
+								data: {
+									timestamp: '' + timestamp
+								},
+								dataType: 'json',
+								success: function(data2) {
+									var obj = data2;
+									var code = obj.code;
+									var msg = obj.message;
+									if (code == 200) {
+										var response = obj.response[0];
+										drawPie(calorieOut, calorieIn, calorieRemain, response.energyConsult);
+									} else if (code == 100) {
+										popover(true, '请完善个人信息及目标设定。');
+										var bloo = window.confirm('需要个人完善信息吗?');
+										if (bloo) {
+											window.location.href = "/user/completeInfo/html";
+										}
+									} else {
+										popover(false, msg);
+									}
+								},
+								error: function() {
+									popover(false, '网络错误');
+								}
+							})
+						} else
+							popover(false, msg);
+					},
+					error: function() {
+						popover(false, '网络错误');
+					}
+				})
+			}
+
+			function drawPie(outC, inC, remainC, energyConsult) {
+				remainC = energyConsult + outC - inC;
+				//饼图数据 value为百分比
+				var percent = remainC * 100 / outC;
+				if (outC == 0)
+					percent = 100;
+				if (remainC < 0) {
+					percent = 0;
+					$('.pie_center').find('.top').addClass('red');
+				}
+				$('.pie_center').find('.top').html(Math.round(remainC));
+				var data = [{
+					name: '',
+					value: percent,
+					color: '#00cccb'
+				}, {
+					name: '',
+					value: 100 - percent,
+					color: '#bbb'
+				}];
+				var chart = new iChart.Donut2D({
+					render: 'pie_board',
+					data: data,
+					center: {},
+					sub_option: {
+						label: false
+					},
+					donutwidth: 0.15,
+					animation: true,
+					background_color: null,
+					border: null,
+					bound_event: false,
+					offset_angle: -90,
+					width: $('body').width(),
+					height: 150
+				});
+				chart.draw();
+			}
+
+			function loadLine() {
+				var today = new Date();
+				var day = today.getDay();
+				if (day == 0) day == 7;
+				day--;
+				var weekDay = [];
+				var start = new Date(today.getTime() - 1000 * 60 * 60 * 24 * day);
+				for (var i = 0; i < 7; i++) {
+					var tmpDay = new Date(start.getTime() + 1000 * 60 * 60 * 24 * i);
+					var tmpM = tmpDay.getMonth() + 1 < 10 ? '0' + (tmpDay.getMonth() + 1) : tmpDay.getMonth() + 1;
+					var tmpD = tmpDay.getDate() < 10 ? '0' + tmpDay.getDate() : tmpDay.getDate();
+					var tmpString = tmpDay.getFullYear() + '-' + tmpM + '-' + tmpD;
+					weekDay.push(tmpString);
+				}
+				var timestamp = new Date().valueOf();
+				jQuery.ajax({
+					type: 'POST',
+					url: '/user/calorie/week/everyday/begin/' + weekDay[0] + '/end/' + weekDay[6],
+					data: {
+						timestamp: '' + timestamp
+					},
+					dataType: 'JSON',
+					success: function(data) {
+						//var obj = JSON.parse(data);
+						var obj = data;
+						var code = obj.code;
+						var msg = obj.message;
+						var array = obj.response;
+						if (code == 200) {
+							var inCalorie = [0, 0, 0, 0, 0, 0, 0],
+								outCalorie = [0, 0, 0, 0, 0, 0, 0];
+							for (var i = 0; i < array.length; i++) {
+								var dayData = array[i];
+								for (var j = 0; j < 7; j++) {
+									if (dayData.calorieDate == weekDay[j]) {
+										inCalorie[j] = dayData.calorieIn;
+										outCalorie[j] = dayData.calorieOut;
+										break;
+									}
+								}
+							}
+							drawLine(inCalorie, outCalorie);
+						} else
+							popover(false, msg);
+					},
+					error: function() {
+						popover(false, '网络错误');
+					}
+				})
+			}
+
+			function drawLine(inC, outC) {
+				//折线图数据
+				var inCalorie = inC,
+					outCalorie = outC,
+					t;
+				var data = [{
+					name: '摄入',
+					value: inCalorie,
+					color: '#ff7f66',
+					line_width: 1
+				}, {
+					name: '消耗',
+					value: outCalorie,
+					color: '#9eda00',
+					line_width: 1
+				}];
+				var labels = ["一", "二", "三", "四", "五", "六", "日"];
+				var line = new iChart.LineBasic2D({
+					render: 'line_board',
+					data: data,
+					align: 'right',
+					offsetx: -$('body').width() * 0.03,
+					width: $('body').width(),
+					height: 140,
+					background_color: null,
+					border: null,
+					tip: {
+						enable: true,
+						shadow: false
+					},
+					crosshair: {
+						enable: true,
+						line_color: '#62bce9'
+					},
+					sub_option: {
+						label: false,
+						hollow: false,
+						hollow_inside: false,
+						point_size: 8
+					},
+					coordinate: {
+						width: $('body').width() * 0.8,
+						height: 90,
+						axis: false,
+						scale: [{
+							scale_share: 3,
+							decimalsnum: 1,
+							scale_enable: false,
+							label: {
+								color: '#999',
+								fontsize: 10,
+								width: $('body').width() * 0.1,
+								offsetx: -$('body').width() * 0.1,
+								textAlign: 'center'
+							},
+						}, {
+							scale_enable: false,
+							position: 'bottom',
+							label: {
+								color: '#999',
+								fontsize: 10,
+								offsety: 7
+							},
+							labels: labels
+						}]
+					}
+				});
+				line.draw();
+			}
+
+			function loadInfo() {
+				var timestamp = new Date().valueOf();
+				jQuery.ajax({
+					type: 'POST',
+					url: '/app/dic/home/info',
+					data: {
+						timestamp: '' + timestamp
+					},
+					dataType: 'JSON',
+					success: function(data) {
+						//var obj = JSON.parse(data);
+						var obj = data;
+						var code = obj.code;
+						var msg = obj.message;
+						var response = obj.response;
+						if (code == 200) {
+							var tmp = "";
+							for (var i = 0; i < response.length; i++) {
+								var info = response[i];
+								tmp += '<li><a onClick="article(\'' + info.infoName + '\',\'' + info.infoUrl + '\')" class="link link_knowledge"><div class="link_content"><span class="link_img"><img src="' + info.infoImgUrl + '"></span><div class="left_top">' + info.infoName + '</div><div class="left_bottom">' + info.infoSubName + '</div></div></a></li>';
+							}
+							$('.home_link_list ul').append(tmp);
+						} else if (code == 100) {} else
+							popover(false, msg);
+					},
+					error: function() {
+						popover(false, '网络错误');
+					}
+				})
+			}
+
+			function popover(type, msg) {
+				$('body').addClass('hasModal');
+				if (type == false)
+					$('body').append('<div class="modal trans"><div class="popover failed">' + msg + '</div></div>');
+				else
+					$('body').append('<div class="modal trans"><div class="popover success">' + msg + '</div></div>');
+				$('.popover').css('margin-top', -$('.popover').height() / 2 + 'px');
+				setInterval(function() {
+					$('.popover').animate({
+						opacity: '0'
+					}, 1000, 'linear', function() {
+						$('.modal').remove();
+						$('body').removeClass('hasModal');
+					});
+				}, 1000);
+			}
+
+			function article(title, url) {
+				sessionStorage.homeInfoTitle = title;
+				sessionStorage.homeInfoUrl = url;
+				location.href = url;
+			}
+			$(document).ready(function() {
+				var href = document.referrer;
+				if (href.indexOf("user/reg/html") > 0) {
+					//var bloo = window.confirm('需要个人完善信息吗?');
+					//if(bloo){
+					//	 window.location.href = "/user/goal/html";
+					//}
+					popover(true, '请完善个人信息及目标设定。')
+				}
+			})
+		</script>
+
+		<div style="position: static; width: 0px; height: 0px; border: none; padding: 0px; margin: 0px;">
+			<div id="trans-tooltip">
+				<div id="tip-left-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left-top.png&quot;);"></div>
+				<div id="tip-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-top.png&quot;) repeat-x;"></div>
+				<div id="tip-right-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right-top.png&quot;);"></div>
+				<div id="tip-right" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right.png&quot;) repeat-y;"></div>
+				<div id="tip-right-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right-bottom.png&quot;);"></div>
+				<div id="tip-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-bottom.png&quot;) repeat-x;"></div>
+				<div id="tip-left-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left-bottom.png&quot;);"></div>
+				<div id="tip-left" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left.png&quot;);"></div>
+				<div id="trans-content"></div>
+			</div>
+			<div id="tip-arrow-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-arrow-bottom.png&quot;);"></div>
+			<div id="tip-arrow-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-arrow-top.png&quot;);"></div>
+		</div>
+
+		<script>
+			alert(0)
+		</script>
+	</body>
+
+</html>

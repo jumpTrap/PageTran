@@ -1,0 +1,427 @@
+@charset "utf-8";
+/* CSS Document */
+/*******************************************************login****************************************************************/
+/*info*/
+.info_link_list{margin:20px 0 20px 0; border-top:1px solid #e4e4e4;}
+.info_link_list #sex_link{margin:20px 0 0 0; border-top:1px solid #e4e4e4;}
+.info_input{margin:20px 0;}
+.info_tag{width:90%; margin:10px 5%; font-size:12px; color:#999; text-align:center}
+
+/*******************************************************home****************************************************************/
+.home_board{position:relative; width:100%; height:160px; border-bottom:1px solid #e4e4e4}
+.pie_board{position:absolute; top:0; left:0; width:100%;  height:160px; background:url(../images/bg_pieboard.png) top center no-repeat; background-size:cover; z-index:1;}
+.board_controller{position:absolute; bottom:5px; width:100%; height:8px; line-height:8px; text-align:center; z-index:10000;}
+.board_controller span{width:8px; height:8px; background:#999; border-radius:4px; margin:0 5px; display:inline-block}
+.board_controller span.selected{background:#00cccb;}
+#pie_board{margin:-10px 0 0 0; position:relative; z-index:1;}
+.pie_center{position:absolute; top:50%; left:50%; margin:-65px 0 0 -50px; width:100px; height:100px; border-radius:50px; background:#fff;z-index:99999;}
+.pie_center span.top{width:100%; line-height:40px; font-size:30px; color:#00cccb; margin:20px 0 0 0; display:inline-block; font-weight:bold; text-align:center}
+.pie_center span.top.red{color:#ff0000}
+.pie_center span.bottom{width:100%; text-align:center; font-size:12px; display:inline-block; color:#999;}
+.pie_tag{position:absolute; bottom:10px; left:0; width:100%; height:20px; text-align:center; font-size:10px; color:#999;}
+
+.line_board{position:absolute; top:0; width:100%; height:160px; background:#fff; display:none;}
+#line_board{margin:-3px 0 0 0;}
+.line_grid{position:absolute; top:0; width:100%; height:100%;}
+.line_grid ul{width:100%; height:135px;}
+.line_grid ul li{width:100%; height:15px; display:block}
+.line_grid ul li.gray{background:#f5f5f5}
+.line_tag{position:absolute; bottom:0px; left:5%; width:90%; height:20px; line-height:20px; text-align:right; font-size:10px; color:#999;}
+.line_tag span{margin:0 5px;}
+.line_tag span.round{width:8px; height:8px; border-radius:4px; display:inline-block;}
+.line_tag span.round.red{background:#ff7f66;}
+.line_tag span.round.green{background:#9eda00;}
+
+.home_btn_bar{width:100%; height:70px; padding:15px 0; background:#fff; border-bottom:1px solid #e4e4e4}
+.home_btn_bar ul{width:100%; height:100%; overflow:hidden}
+.home_btn_bar ul li{width:25%; height:100%; float:left; text-align:center; line-height:15px; color:#666; display:block;}
+.home_btn_bar a span.btn_icon{width:45px; height:45px; background:#00cccb; border-radius:22px; position:relative; left:50%; margin:0 0 7px -22px;  display:block;}
+.home_btn_bar a span.btn_text{line-height:15px;}
+.home_btn_bar a.btn_search span.btn_icon{background:#ff7f66 url(../../images/html5/icon_search.png) center no-repeat; background-size:30px 30px;}
+.home_btn_bar a.btn_scan span.btn_icon{background:#ffd900 url(../../images/html5/icon_scan.png) center no-repeat; background-size:30px 30px;}
+.home_btn_bar a.btn_add span.btn_icon{background:#9eda00 url(../../images/html5/icon_add.png) center no-repeat; background-size:30px 30px;}
+.home_btn_bar a.btn_weight span.btn_icon{background:#00cccb url(../../images/html5/icon_weight.png) center no-repeat; background-size:30px 30px;}
+
+.home_link_list{margin:20px 0 20px 0; background:#fff; border-top:1px solid #e4e4e4}
+
+/*code*/
+.code_box{position:absolute; top:50%; left:50%; width:246px; height:220px; margin:-90px 0 0 -123px; }
+.code_box .code{width:246px; height:102px; background:url(../../images/html5/code.png) center no-repeat}
+.code_box button.square_btn{position:absolute; bottom:45px; left:50%; width:246px; height:50px; margin:0 0 0 -123px; color: #fff; font-size: 16px; background: #00cccb; outline: none;border: none;}
+.code_box .tag{position:absolute; bottom:0px; line-height:30px; width:100%; height:30px; text-align:center;}
+.code_box .tag a{color:#aaa;}
+
+
+/*weight*/
+.weight_single_link{background:#fff; border:1px solid #e4e4e4; border-left:none; border-right:none;}
+
+.weight_line_board{position:relative; width:100%; height:270px; background:#fff; margin:0;}
+.weight_line_title{width:90%; height:30px; padding:0 5%; line-height:30px; background:#f0eff5; border-bottom:1px solid #e4e4e4;}
+.weight_line_grid{position:absolute; top:30px; width:100%; height:100%;}
+.weight_line_grid ul{width:100%;}
+.weight_line_grid ul li{width:100%; height:30px; display:block}
+.weight_line_grid ul li.gray{background:#f5f5f5}
+.weight_line_line{position:absolute; left:15%; width:1px; height:210px; background:#ddd;}
+.weight_line_label{position:absolute; left:0; bottom:0; width:20%; height:30px; line-height:30px; text-align:center; font-size:10px; color:#999;}
+.weight_line_tag{position:absolute; right:5%; bottom:0; height:30px; line-height:30px; text-align:center; font-size:10px; color:#999;}
+.weight_line_tag span{width:8px; height:8px; border-radius:4px; display:inline-block; background:#9eda00; margin:0 10px 0 0;}
+
+
+/*******************************************************diet****************************************************************/
+.goal_board{position:fixed; top:50px; width:100%; height:50px; background:#fff; border-bottom:1px solid #e4e4e4; z-index:999;}
+.goal_board ul{width:100%; height:40px; padding:5px 0; text-align:center}
+.goal_board ul li{display:inline-block; margin:0 5px; overflow:hidden}
+.goal_board ul li .top{height:25px; line-height:25px;}
+.goal_board ul li .bottom{height:15px; line-height:15px; font-size:12px; color:#bbb;}
+
+.diet_toolbar{position:fixed; bottom:-50px; height:50px; width:100%; background:rgba(0,0,0,0.5);}
+.diet_toolbar ul{width:100%; height:100%;}
+.diet_toolbar ul li{width:33%; height:100%; text-align:center; float:left}
+.diet_toolbar ul li a{height:50px; line-height:50px; padding:0 0 0 30px; color:#fff; display:inline-block}
+.diet_toolbar ul li a.toolbar_copy{background:url(../../images/html5/icon_copy.png) left center no-repeat; background-size:30px 30px;}
+.diet_toolbar ul li a.toolbar_group{background:url(../../images/html5/icon_suit.png) left center no-repeat; background-size:30px 30px;}
+.diet_toolbar ul li a.toolbar_delete{background:url(../../images/html5/icon_delete.png) left center no-repeat; background-size:30px 30px;}
+
+.diet_link_list{width:94%; margin:15px 3% 0 3%;}
+.diet_link_list .plus_content{border:none}
+.diet_link_list ul li{position:relative; border-top:1px solid #e4e4e4; border-bottom:none; overflow:hidden}
+.diet_link_list ul li a.link{position:relative;}
+.diet_link_list ul li a.delete{position:absolute; top:0; right:-50px; width:50px; height:50px; line-height:50px; text-align:center; background:#ff0000; color:#fff; display:block}
+.diet_link_list ul li a.select{position:absolute; top:0; left:-50px; width:50px; height:50px; line-height:50px; text-align:center; background:url(../../images/html5/icon_select.png) center no-repeat; background-size:16px 16px; color:#fff; display:block}
+.diet_link_list ul li a.select.selected{background:url(../../images/html5/icon_select_selected.png) center no-repeat; background-size:16px 16px; }
+.diet_link_list ul li.plus_li{border:none}
+.snack_link_list{margin-bottom:15px;}
+
+.breakfast_link_list span.link_icon{width:32px; height:32px; margin:9px 20px 0 0; float:left; background:#44cef6 url(../../images/html5/icon_breakfast.png) center no-repeat; background-size:30px 30px; border-radius:16px;}
+.lunch_link_list span.link_icon{width:32px; height:32px; margin:9px 20px 0 0; float:left; background:#9ed900 url(../../images/html5/icon_lunch.png) center no-repeat; background-size:30px 30px; border-radius:16px;}
+.dinner_link_list span.link_icon{width:32px; height:32px; margin:9px 20px 0 0; float:left; background:#48d0ae url(../../images/html5/icon_dinner.png) center no-repeat; background-size:30px 30px; border-radius:16px;}
+.snack_link_list span.link_icon{width:32px; height:32px; margin:9px 20px 0 0; float:left; background:#ffd900 url(../../images/html5/icon_snack.png) center no-repeat; background-size:30px 30px; border-radius:16px;}
+
+.group_title{width:90%; margin:20px 5% 10px 5%; font-size:16px;}
+.group_link_list{border-top:1px solid #e4e4e4;}
+.group_content{background:#fff; border-bottom:1px solid #e4e4e4;}
+button.square_btn.delete_btn{background:#ff0000; margin-top:20px;}
+
+/*dietMenu*/
+
+.calculate_list{width:100%; margin:30px 0; border-top:1px solid #e4e4e4;}
+.calculate_list ul{width:100%;}
+.calculate_list ul li{background:#fff;}
+
+.calculate_tag{width:90%; margin:20px 5%; text-align:center; font-size:12px; color:#aaa;}
+.calculate_pic{width:100%;}
+.calculate_pic ul{width:80%; margin:10px 10%;}
+.calculate_pic ul li{width:100%; overflow:hidden}
+.calculate_pic ul li.pic{height:70px;}
+.calculate_pic ul li .pic_block{width:32%; text-align:center; display:inline-block}
+.calculate_pic ul li.pic img{height:70px;}
+.calculate_pic ul li.text {margin:10px 0 25px 0; }
+.calculate_pic ul li.text .text_block{width:50%; display:block; float:left; text-align:left}
+.calculate_pic ul li.text .text_block.right{ text-align:right; color:#00cccb}
+.calculate_pic ul li.text .text_block span{display:block; font-size:13px;}
+
+.calculate_plate{position:relative; width:100%; height:240px;}
+.plate_img{position:absolute; left:50%; top:50px; margin:0 -100px; width:200px; height:150px}
+.plate_img img{width:200px;}
+.iphone_img img{width:70px}
+.top_iphone_img{position:absolute; left:50%; margin:-10px 0 0 -85px; width:70px}
+.bottom_iphone_img{position:absolute; left:50%; bottom:0px; margin:0 0 0 -37px; width:70px}
+.right_iphone_img{position:absolute; right:50%; bottom:60px; margin:0 -133px 0 0; width:70px}
+.iphone_text{font-size:13px; color:#aaa;}
+.iphone_text span{color:#00ccc7; margin:0 0 0 10px;}
+.top_iphone_text{position:absolute; left:50%; top:45px; margin:0 0 0 -75px;}
+.bottom_iphone_text{position:absolute; left:50%; bottom:5px; margin:0 0 0 -75px;}
+
+#weight_treelist_dummy{position:absolute; top:0; left:0; width:90%; height:100%; padding:0 10% 0 0; background:none; text-align:right}
+.ui-calendar-header{background:#83d9da; height:40px; line-height:40px; font-size:15px; color:#04afb6;}
+span.left_arrow{width:0; height:0; border-top: 5px solid transparent;  border-right: 8px solid #04afb6; border-bottom: 5px solid transparent; display:inline-block}
+span.right_arrow{width:0; height:0; border-top: 5px solid transparent;  border-left: 8px solid #04afb6; border-bottom: 5px solid transparent; display:inline-block}
+.ui-calendar-calendar th{color:#04afb6}
+.ui-calendar-calendar td.ui-calendar-current-day a {background-color:#83d9da; color:#00afae;}
+.ui-slideup-wrap {background:rgba(0, 0, 0, 0.5);}
+.ui-slideup .no-btn {top:10px; background-color:#FFF;border:1px solid #83d9da;color: #83d9da;}
+.ui-slideup .ok-btn {top:10px; background-color: #04afb6;}
+
+/********************************************************sport****************************************************************/
+.sport_link_list{width:94%; margin:15px 3% 0 3%;}
+.sport_link_list .plus_content{border:none}
+.sport_link_list ul li{position:relative; border-top:1px solid #e4e4e4; border-bottom:none; overflow:hidden}
+.sport_link_list ul li a.link{position:relative;}
+.sport_link_list ul li a.delete{position:absolute; top:0; right:-50px; width:50px; height:50px; line-height:50px; text-align:center; background:#ff0000; color:#fff; display:block}
+.sport_link_list ul li a.select{position:absolute; top:0; left:-50px; width:50px; height:50px; line-height:50px; text-align:center; background:url(../../images/html5/icon_select.png) center no-repeat; background-size:16px 16px; color:#fff; display:block}
+.sport_link_list ul li a.select.selected{background:url(../../images/html5/icon_select_selected.png) center no-repeat; background-size:16px 16px; }
+.sport_link_list ul li.plus_li{border:none}
+
+.step_link_list span.link_icon{width:32px; height:32px; margin:9px 20px 0 0; float:left; background:#ffd900 url(../../images/html5/icon_step.png) center no-repeat; background-size:30px 30px; border-radius:16px;}
+.step_link_list a{color:#bbb; font-size:12px;}
+.partner_link_list span.link_icon{width:32px; height:32px; margin:9px 20px 0 0; float:left; background:#9ed900 url(../../images/html5/icon_bracelet.png) center no-repeat; background-size:30px 30px; border-radius:16px;}
+.partner_link_list a{color:#00cccb; }
+.sports_link_list span.link_icon{width:32px; height:32px; margin:9px 20px 0 0; float:left; background:#44cef6 url(../../images/html5/icon_sport.png) center no-repeat; background-size:30px 30px; border-radius:16px;}
+
+.sport_tab ul.tab_bar li{width:50%;}
+.sport_tab .tab_content{background:none}
+
+/********************************************************search****************************************************************/
+.search_options{position:absolute; top:20px; left:15%; margin:0 0 0 -20px; width:90px; height:100px; display:none}
+.search_options.display{display:block}
+.search_options .search_arrow{width:90px; height:31px; text-align:center}
+.search_options .search_arrow span.arrow{border-width:15px; border-style:dashed dashed solid dashed; border-color: transparent transparent rgba(0,0,0,0.5) transparent;}
+.search_options .search_options_box{width:90px; height:80px; background:rgba(0,0,0,0.5);}
+.search_options .search_options_box a{width:60px; height:40px; padding:0 15px; color:#fff; line-height:40px; text-align:right; display:block;}
+.search_options .search_options_box a span.btn_text{line-height:40px; }
+.search_options .search_options_box a.btn_food span.btn_icon{width:27px; height:40px; background:url(../../images/html5/icon_food.png) center no-repeat;background-size:27px 27px;  display:block; float:left}
+.search_options .search_options_box a.btn_restaurant span.btn_icon{width:27px; height:40px; background:url(../../images/html5/icon_restaurant.png) center no-repeat;background-size:27px 27px;  display:block; float:left}
+
+.history_list{width:100%;}
+.history_list ul{width:100%;}
+.history_list ul li{width:100%; height:46px;}
+.history_list ul li a{width:80%; height:45px; line-height:45px; padding:0 10%;  border-bottom:1px solid #e4e4e4; display:block;}
+.history_list ul li a.btn_clear{border-bottom:none; text-align:center; color:#666;}
+
+.result_list{position:fixed; top:50px; overflow:auto }
+.result_list ul li{background:#fff; }
+.result_list ul li.search_more{background:#f0eff5; text-align:center; border-bottom:none}
+
+
+/********************************************************user****************************************************************/
+.user_board{width:100%; height:130px; background:#fff; border-bottom:1px solid #e4e4e4;}
+.user_board .user_link{position:relative; width:100%; height:84px; border-bottom:1px solid #e4e4e4; overflow:hidden}
+.user_board .user_link a.link{height:60px;  padding:12px 5%;}
+.user_board .user_link a.link .link_content{height:60px;}
+.user_board .user_link a.link .link_content .left_top{font-size:16px; margin:13px 0 5px 80px;}
+.user_board .user_link a.link .link_content .left_bottom{margin:0 0 0 80px; color:#999;}
+.user_board .user_link .user_pic{position:absolute; top:12px; left:5%; width:60px; height:60px;display:block; border-radius:30px; float:left}
+.user_board .user_link .user_pic img{width:60px; height:60px;}
+.user_board .user_weight{width:100%; height:45px;}
+.user_board .user_weight ul{width:100%; height:45px;}
+.user_board .user_weight ul li{width:33%; height:30px; padding:8px 0 7px 0; float:left; text-align:center; border-left:1px solid #e4e4e4;}
+.user_board .user_weight ul li .weight_top{height:18px; line-height:18px; }
+.user_board .user_weight ul li .weight_bottom{font-size:10px; height:12px; line-height:12px; color:#999; }
+
+.user_link_list{margin:15px 0 0 0; border-top:1px solid #e4e4e4;}
+.user_link_list .link_statistics span.link_icon{background:#48cfae url(../../images/html5/icon_statistics.png) no-repeat; background-size:30px 30px; border-radius:5px;}
+.user_link_list .link_report span.link_icon{background:#9ed900 url(../../images/html5/icon_report.png) no-repeat; background-size:30px 30px; border-radius:5px;}
+.user_link_list .link_goal span.link_icon{background:#ff7500 url(../../images/html5/icon_goal.png) no-repeat; background-size:30px 30px; border-radius:5px;}
+.user_link_list .link_menu span.link_icon{background:#44cef6 url(../../images/html5/icon_menu.png) no-repeat; background-size:30px 30px; border-radius:5px;}
+.user_link_list .link_bracelet span.link_icon{background:#9ed900 url(../../images/html5/icon_bracelet.png) no-repeat; background-size:30px 30px; border-radius:5px;}
+.user_link_list .link_plan span.link_icon{background:#48cfae url(../../images/html5/icon_plan.png) no-repeat; background-size:30px 30px; border-radius:5px;}
+.user_link_list .link_membership{margin:15px 0 0 0; border-top:1px solid #e4e4e4;}
+.user_link_list .link_membership span.link_icon{background:#ffd900 url(../../images/html5/icon_membership.png) no-repeat; background-size:30px 30px; border-radius:5px;}
+.user_link_list .link_mall span.link_icon{background:#44cef6 url(../../images/html5/icon_mall.png) no-repeat; background-size:30px 30px; border-radius:5px;}
+.user_link_list .link_sping span.link_icon {background: #4EEE94 url(../../images/html5/sping.png) no-repeat;background-size: 30px 30px;border-radius: 5px;}
+#value_treelist_dummy{display:none}
+
+
+/********************************************************setting****************************************************************/
+.setting_link_list{margin:20px 0 20px 0; border-top:1px solid #e4e4e4;}
+.btn_setting_out{width:100%; height:45px; line-height:45px; text-align:center; background:#fff; border:1px solid #e4e4e4; border-left:none; border-right:none; display:block}
+
+/*feedback*/
+.feedback_textarea{width:80%; height:100px; margin:20px 5%; padding:10px 5%; border:none; outline:none; font-size:12px;}
+
+
+/*password*/
+.password_box{margin:21px 0 0 0;}
+.password_box input{margin:-1px 0 0 0;}
+.password_box input.confirm_password{margin:-1px 0 20px 0;}
+
+/********************************************************personal****************************************************************/
+.personal_link_list{margin:20px 0 20px 0; border-top:1px solid #e4e4e4;}
+.personal_link_list .city_link{margin:20px 0 0 0; border-top:1px solid #e4e4e4;}
+.personal_link_list .sex_link input{margin:0 5px 0 10px;}
+.personal_input{margin:20px 0;}
+
+/********************************************************statistic****************************************************************/
+#dount_chart{height:238px; overflow:hidden; margin:20px 0 0 0;}
+.dount_statistics{width:100%; height:160px; background:#fff;}
+.dount_statistics ul{width:288px; margin:0 auto}
+.dount_statistics ul li{width:288px; height:35px; line-height:35px; }
+.dount_statistics ul li.carbohydrate,.dount_statistics ul li.protein{background:#f5f5f5}
+.dount_statistics ul li span{display:inline-block}
+.dount_statistics ul li span.color{width:30px; height:15px;  display:block; margin:10px 10px; padding:0; float:left}
+.dount_statistics ul li.carbohydrate span.color{background:#44cef6}
+.dount_statistics ul li.fat span.color{background:#ff7f66}
+.dount_statistics ul li.protein span.color{background:#999}
+.dount_statistics ul li span.title{width:138px;}
+.dount_statistics ul li span.total{width:50px; color:#00cccb}
+.dount_statistics ul li span.goal{width:50px;}
+
+/********************************************************report****************************************************************/
+.report_link_list{margin:20px 0 20px 0; border-top:1px solid #e4e4e4;}
+
+/********************************************************goal****************************************************************/
+.goal_link_list{margin:20px 0 20px 0; border-top:1px solid #e4e4e4;}
+.goal_hint{width:90%; padding:0 5%; color:#00cccb;}
+
+/********************************************************menu****************************************************************/
+.menu_link_list{margin:20px 0 20px 0; border-top:1px solid #e4e4e4;}
+.menu_link_list ul li{position:relative; overflow:hidden}
+.menu_link_list ul li a.link{position:relative;}
+.menu_link_list ul li a.delete{position:absolute; top:0; right:-50px; width:50px; height:50px; line-height:50px; text-align:center; background:#ff0000; color:#fff; display:block}
+.menu_input{margin:20px 0;}
+.user_menu_tag{width:90%; margin:20px 5%; text-align:center; color:#aaa}
+
+/*menuDetail*/
+.menu_content{background:#fff;}
+.menu_content .right{right:5%;}
+
+/*addMaterial*/
+.material_content{background:#fff; border-bottom:1px solid #e4e4e4; margin:0 0 20px 0;}
+.material_content .right{right:5%;}
+
+.material_weight_content{background:#fff; border:1px solid #e4e4e4; border-left:none; border-right:0; margin:0 0 20px 0;}
+.material_weight_content .right{width:100%; height:50px; top:0; right:0;}
+.material_weight_content .weight_input{width:50%; height:50px; line-height:50px; padding:0 5%; text-align:right}
+
+.material_link_list ul li{position:relative; overflow:hidden}
+.material_link_list ul li a.link{position:relative;}
+.material_link_list ul li a.delete{position:absolute; top:0; right:-50px; width:50px; height:50px; line-height:50px; text-align:center; background:#ff0000; color:#fff; display:block}
+
+.nutrition_list{width:100%;position: relative;}
+.nutrition_list .list_header{width:100%; height:35px; line-height:35px; background:#00cccb; color:#fff; text-align:center}
+.nutrition_list ul{position: relative;width:100%; overflow-x:hidden}
+.nutrition_list ul li{width:100%; height:40px; padding:0 0 0 5%;  background:#fff; line-height:40px; border-bottom:1px solid #e4e4e4;}
+.nutrition_list ul li span.left{float:left;}
+.nutrition_list ul li span.right{float: right;padding: 0 10% 0 0;}
+
+/*addFood*/
+.food_content{background:#fff; border-bottom:1px solid #e4e4e4; margin:0;}
+.food_content .right{right:5%;}
+
+.food_weight_link{background:#fff; border:1px solid #e4e4e4; border-left:none; border-right:none;}
+
+.question{height:30px;}
+.question a{width:auto; height:30px; line-height:30px; color:#999; padding:0 5%; background:0; font-size:10px; text-align:right; display:inline; float:right}
+.question a span.btn_icon{width:16px; height:16px; line-height:16px; text-align:center; margin:0 10px 0 0; border-radius:8px; color:#f0eff5; background:#c2c8ce; display:inline-block;}
+
+.choose_meal{height:50px; line-height:50px; background:none; border:none; text-align:center;}
+.choose_meal label{margin:0 10px 0 4px;}
+
+/*addCalorie*/
+.calorie_content{background:#fff; border:1px solid #e4e4e4; border-left:none; border-right:0; margin:0;}
+.calorie_content .right{width:100%; height:50px; top:0; right:0;}
+.calorie_content .calorie_input{width:50%; height:50px; line-height:50px; padding:0 5%; text-align:right}
+.calorie_tag{width:90%; height:30px; padding:10px 5% 0 5%; line-height:30px; text-align:right}
+
+/********************************************************plan****************************************************************/
+.plan_link_list{width:94%; margin:15px 3% 0 3%;}
+.plan_link_list .plus_content{border:none}
+.plan_link_list ul li{border-top:1px solid #e4e4e4; border-bottom:none; position:relative; overflow:hidden}
+.plan_link_list ul li a.link{position:relative;}
+.plan_link_list ul li a.delete{position:absolute; top:0; right:-50px; width:50px; height:50px; line-height:50px; text-align:center; background:#ff0000; color:#fff; display:block}
+.plan_link_list ul li.plus_li{border:none}
+.sun_link_list{margin-bottom:15px;}
+
+
+/*addsport*/
+.sport_title{width:90%; margin:20px 5% 10px 5%; font-size:16px;}
+.sport_time_content{background:#fff; border:1px solid #e4e4e4; border-left:none; border-right:0; }
+.sport_time_content .right{width:100%; height:50px; top:0; right:0;}
+.sport_time_content .sport_time_input{width:50%; height:50px; line-height:50px; padding:0 5%; text-align:right}
+.sport_calorie_content{background:#fff; border-bottom:1px solid #e4e4e4; border-left:none; border-right:0;}
+.sport_calorie_content .right{color:#00cccb}
+
+/********************************************************member****************************************************************/
+input.member_input{width:80%; height:45px; line-height:45px; margin:20px 5%; padding:0 5%; border:1px solid #e4e4e4; }
+.member_tag{width:90%; margin:20px 5%; color:#bbb; text-indent:2em; font-size:12px;}
+.test {
+			position: relative;
+			width: 100px;
+			height: 100px;
+			margin:  -35px 0 0 76%;
+			float: left;
+		}
+		.test span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-size: 20px;
+		}
+		.test svg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			stroke-dasharray: 1%, 300%;
+			stroke-dashoffset: 0%;
+			stroke: #666666;
+			stroke-linecap: round;
+			fill: none;
+			-webkit-transform: rotate(-90deg);
+			-moz-transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg);
+			-o-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+		}
+		.test svg {
+			animation: first1 3s linear infinite;
+			-moz-animation: first1 3s linear infinite;
+			-webkit-animation: first1 3s 0 linear infinite;
+			-o-animation: first1 3s 0 linear infinite;
+		}
+		@-webkit-keyframes first1 {
+			0% {
+				stroke-dasharray: 0%, 250%;
+				stroke-dashoffset: 0%;
+			}
+			50% {
+				stroke-dasharray: 250%, 250%;
+				stroke-dashoffset: 0%;
+			}
+			100% {
+				stroke-dasharray: 250%, 250%;
+				stroke-dashoffset: -250%;
+			}
+		}
+		@-moz-keyframes first1 {
+			0% {
+				stroke-dasharray: 0%, 250%;
+				stroke-dashoffset: 0%;
+			}
+			50% {
+				stroke-dasharray: 250%, 250%;
+				stroke-dashoffset: 0%;
+			}
+			100% {
+				stroke-dasharray: 250%, 250%;
+				stroke-dashoffset: -250%;
+			}
+		}
+		@-o-keyframes first1 {
+			0% {
+				stroke-dasharray: 0%, 250%;
+				stroke-dashoffset: 0%;
+			}
+			50% {
+				stroke-dasharray: 250%, 250%;
+				stroke-dashoffset: 0%;
+			}
+			100% {
+				stroke-dasharray: 250%, 250%;
+				stroke-dashoffset: -250%;
+			}
+		}
+		@-keyframes first1 {
+			0% {
+				stroke-dasharray: 0%, 250%;
+				stroke-dashoffset: 0%;
+			}
+			50% {
+				stroke-dasharray: 250%, 250%;
+				stroke-dashoffset: 0%;
+			}
+			100% {
+				stroke-dasharray: 250%, 250%;
+				stroke-dashoffset: -250%;
+			}
+		}
+		.size2 {
+			width: 20px;
+			height: 20px;
+		}

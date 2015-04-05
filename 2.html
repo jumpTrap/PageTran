@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html data-d="2" data-c="2">
+
+	<head>
+		<meta charset='UTF-8'>
+	</head>
+	<script src="js/jquery-2.1.0.js"></script>
+
+	<body>
+
+		<p id="demo">点击按钮来获得 button 元素的 onclick 属性值。</p>
+		<button onclick="myFunction()" data-d="2">试一下</button>
+		<script>
+			function myFunction() {
+				var a = document.getElementsByTagName("BUTTON")[0];
+				var x = document.getElementById("demo");
+				//				alert(a.attributes.length)
+				//				x.innerHTML = a.attributes.getNamedItem("onclick").textContent;
+			}
+			//			alert($("html")[0].attributes.length)
+			//			alert("<html id=1 name=2></html>".replace("<html", "x"))
+			//			alert("<html id=1 name=2></html>".indexOf(">"))
+			var html = "<!DOCTYPE html><html id=1 name=2 v=3><span>x</span></html>";
+			//			alert(html.indexOf("<html"))
+			//			alert(html.indexOf("</html>") - 5)
+			//			var htmlIndex = html.indexOf("<html");
+			//			alert(html.indexOf(">", 15))
+			//			alert("<span" + html.substring(htmlIndex + 5, html.indexOf(">", htmlIndex)) + "/>");
+			//			alert($("<span id=b1></html>").attr("id"))
+		</script>
+
+		<p><b>注释：</b>Internet Explorer 8 以及更早的版本不支持 getNamedItem 方法。</p>
+
+	</body>
+
+</html>
